@@ -1,0 +1,36 @@
+/* Estilo del textarea como editor */
+#codeEditor{
+  color: #e6e9ef;
+  font-size: 14.5px;
+  line-height: 1.55;
+  padding: 16px 14px 18px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  caret-color: var(--accent-2);
+  /* que se pueda redimensionar verticalmente en móvil si quieres */
+  resize: none;
+  /* sombra interna leve para efecto de profundidad */
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.03);
+}
+
+/* Placeholder tenue */
+#codeEditor::placeholder{
+  color: rgba(230,233,239,.35);
+}
+
+/* Cuando está en focus, elevamos un poco el borde */
+#codeEditor:focus{
+  border-color: color-mix(in lab, var(--accent), white 25%);
+  box-shadow:
+    0 0 0 4px rgba(124,92,255,.12),
+    0 10px 25px rgba(0,0,0,.35);
+}
+
+/* Iframe (preview) rellena el panel sin borde por defecto */
+#previewFrame{
+  border: none;
+}
+
+/* Ajustes de selección de texto */
+#codeEditor::selection{
+  background: rgba(124,92,255,.28);
+}
